@@ -13,11 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var createForm = document.getElementById("create-account");
 
   if (computeForm) {
+    var n1El = document.getElementById("num1");
+    var n2El = document.getElementById("num2");
+
+    n1El.addEventListener("input", function() {
+      n1El.setCustomValidity("");
+    });
+    n2El.addEventListener("input", function() {
+      n2El.setCustomValidity("");
+    });
+
     computeForm.addEventListener("submit", function (evt) {
-      var n1El = document.getElementById("num1");
-      var n2El = document.getElementById("num2");
-
-
       n1El.setCustomValidity("");
       n2El.setCustomValidity("");
 

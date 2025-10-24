@@ -17,7 +17,7 @@
         if (!pairs[i]) continue;
         var kv = pairs[i].split("=");
         var key = decodeURIComponent(kv[0] || "");
-        var val = decodeURIComponent(kv[1] || "");
+        var val = decodeURIComponent(kv[1] || "").replace(/\+/g, ' ');
         map[key] = val;
       }
       return map;

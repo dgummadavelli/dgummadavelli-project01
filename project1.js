@@ -1,3 +1,4 @@
+"use strict";
 /*    Project 1
 
       Order Form Code
